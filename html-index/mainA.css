@@ -1,0 +1,242 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.logo_main
+{
+  margin-left: 4%;
+  top:8%;
+  z-index: 1;
+
+  position: absolute;
+  transform: translate(-50%, -50);
+  width: auto;
+  height: 50px;
+}
+/*Div principale de la page*/
+h4
+{
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #44BBCA;
+  position: absolute;
+  top: 20px;
+  z-index: 3;
+}
+h2
+{
+  font-size: 42px;
+  font-weight: bold;
+  color: #006CB2;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  z-index: 6;
+}
+.boxp1
+{
+  position: relative;
+  left: 50px;
+  width: 94%;
+  height: 1000px;
+  /*background: #9b9bff;*/
+}
+.box1
+{
+    width: 589px;
+    height: 438px;
+    background-color: red;
+    border: 2px;
+
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    /*transform: translate(500% , 500%);*/
+}
+.box1 img
+{
+  width: 589px;
+  height: 438px;
+}
+.titre1
+{
+  color: #44BBCA;
+  font-size: 46px;
+  line-height: 1.3;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+}
+.sommaire
+{
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+}
+.para
+{
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 300;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 60px;
+}
+.box_tr/*la div transparent*/
+{
+  width: 589px;
+  height: 208px;
+  position: absolute;
+  bottom: 0px;
+  background-color: #006cb2; /*rgb(0 108 178 / 85%);*/
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+  z-index: auto;
+}
+.fleche img /*boutton pour la nouvelle page*/
+{
+  width: 25px;
+  height: 24px;
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+}
+.box2
+{
+  width: 588px;
+  height: 438px;
+  background-color: green;
+  border: 2px;
+
+  position: absolute;
+  top: 480px;
+  left: 589px;
+}
+.box2 img
+{
+  width: 588px;
+  height: 438px;
+}
+
+/*-------------pour les footer------------------*/
+footer
+{
+  margin-left: -1%;
+  flex-shrink: 0;
+  border-top: 0px;
+  width: 101% auto;
+  background: #006CB2;
+  color: #FFFFFF;
+}
+.contenu-footer/*positionement du  contenu du footer*/
+{
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  padding: 50px 0 100px;
+}
+.bloc
+{
+  width: 25%;
+  margin: 0 30px;
+}
+
+/*titre*/
+.footer-services h3,
+.footer-limoge h3,
+.footer-reseaux h3
+{
+  font-size: 16px;
+  padding-bottom: 10 px;
+}
+.footer-services/*taille des texte dans la liste srevice*/
+{
+  font-size: 12px;
+}
+.footer-logo/*positionnement du logo footer*/
+{
+  /*position: relative;*/
+  position: relative;
+  right: 30px;
+}
+/*liste*/
+.liste-Logo,
+.liste-services,
+.liste-limoge,
+.liste-reseaux /*pour retire les point devant les liste*/
+{
+  list-style-type: none;
+}
+
+.liste-services li
+{
+  padding: 2px 0;
+}
+.liste-services a
+{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.liste-services a:hover/*pour fair les hover flo sur les liens de liste*/
+{
+  color: rgb(3, 3, 3);
+}
+/*icone*/
+.liste-limoge/*positionnement du logo limoge*/
+{
+  position: relative;
+  top: 10px;
+  right: 1px;
+}
+.liste-reseaux/*positionnement des logos de reseaux*/
+{
+  position: relative;
+  top: 10px;
+  right: 1px;
+}
+.liste-reseaux li/*metre a la ligne la liste*/
+{
+  display: inline;
+}
+.liste-services/*positionnement des liste services*/
+{
+  position: relative;
+  top: 10px;
+  right: 1px;
+}
+
+
+/*-----------------------popup------------------------------*/
+
+
+/*@media screen and (max-width: 1300px) {
+    .contenu-footer
+    {
+      width: 700px;
+      flex-wrap: wrap;
+    }
+    .bloc
+    {
+      width: 40%;
+      margin: 0 0;
+    }
+    .bloc:nth-child(1),
+    .bloc:nth-child(2){
+      margin-bottom: 50px;
+    }
+
+}*/
