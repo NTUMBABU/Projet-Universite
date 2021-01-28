@@ -71,17 +71,23 @@
   }
   .content-admi
   {
+    position: relative;
     margin-left: 250px;
     background-position: center;
     background-size: cover;
     height: 100vh;
-    padding:20px;
+    padding-top:60px;
+    display: flex;
+    border: 1px solid red;
+    top:60px;
+    z-index: -1;
   }
   .projects ul
   {
     position: absolute;
-    top: 80px;
-    background:grey;
+    top: 60px;
+    padding:10px;
+    background:#C4D8DC;
     width:200px;
     list-style:none;
     opacity:0;
@@ -89,7 +95,7 @@
     transform:translateY(10px);
     transition: all 0.4s ease;
   }
-  .projects button:focus + ul
+  .projects #bout:focus + ul
   {
     opacity: 1;
     pointer-events: all;
@@ -104,6 +110,10 @@
   {
     color:black;
     text-decoration:none;
+  }
+  .li1 a:hover
+  {
+    text-decoration: underline overline;
   }
 </style>
 <!-- Optional JavaScript -->
