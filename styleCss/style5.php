@@ -77,7 +77,34 @@
     height: 100vh;
     padding:20px;
   }
-
+  .projects ul
+  {
+    position: absolute;
+    top: 80px;
+    background:grey;
+    width:200px;
+    list-style:none;
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(10px);
+    transition: all 0.4s ease;
+  }
+  .projects button:focus + ul
+  {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+  }
+  .li1, .li2
+  {
+    display: inline;
+    margin:10px;
+  }
+  .li1 a
+  {
+    color:black;
+    text-decoration:none;
+  }
 </style>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

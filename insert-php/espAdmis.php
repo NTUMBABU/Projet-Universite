@@ -5,7 +5,15 @@
   <div class="point-gc">
               <samp style="font-size:15px;">Nom d'utilisateur</samp>
               <img src="/Projet-Universite/multi-media/drapeau.jpg" alt="" height="50" width="50" style="border-radius: 50%;">
-
+              <div class="projects">
+                <button>projects</button>
+                <ul>
+                  <li><img src="../multi-media/profil.png" height="110" width="110"></li>
+                  <hr>
+                  <li class="li1"> <a href="#">Profil</a> </li>
+                  <li class="li2"> <button type="button" name="button">Se déconnecter</button> </li>
+                </ul>
+              </div>
   </div>
 </header>
 
