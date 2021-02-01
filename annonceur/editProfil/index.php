@@ -133,15 +133,15 @@
           </div>
           <hr>
           <div class="col-md-3">
-            <label for="inputPassword4" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-          <div class="col-md-3">
-            <label for="inputPassword4" class="form-label">Ancien mot de passe</label>
+            <label for="inputPassword4" class="form-label"> Ancien mot de passe</label>
             <input type="password" class="form-control" id="inputPassword4">
           </div>
           <div class="col-md-3">
             <label for="inputPassword4" class="form-label">Nouveaux mot de passe</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Confirme nouveaux mot de passe</label>
             <input type="password" class="form-control" id="inputPassword4">
           </div>
           <hr>

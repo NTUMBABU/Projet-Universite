@@ -9,6 +9,7 @@
   {
     margin: 0;
     padding: 0;
+    background:#f1f1f1;
   }
   header
   {
@@ -16,7 +17,7 @@
       background:  #17202A;
       width: 100%;
       height: auto;
-
+      z-index:3;
   }
   header .point-dr
   {
@@ -48,6 +49,7 @@
     left: 0;
     width: 250px;
     height: 100%;
+    z-index:3;
   }
   .side-bar a
   {
@@ -73,27 +75,26 @@
   {
     position: relative;
     margin-left: 250px;
-    background-position: center;
-    background-size: cover;
+    /* background-size: cover; */
     height: 100vh;
-    padding-top:60px;
-    display: flex;
-    border: 1px solid red;
+    /* display: flex; */
+    background: #f1f1f1;
     top:60px;
-    z-index: -1;
+    z-index:1;
   }
   .projects ul
   {
     position: absolute;
     top: 60px;
     padding:10px;
-    background:#C4D8DC;
+    background:#f1f1f1;
     width:200px;
     list-style:none;
     opacity:0;
     pointer-events:none;
     transform:translateY(10px);
     transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
   .projects #bout:focus + ul
   {
@@ -114,6 +115,171 @@
   .li1 a:hover
   {
     text-decoration: underline overline;
+  }
+  /*styel de la page gestion d'utilisateur*/
+  .container
+  {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 990px;
+    height: 300px;
+    background: #f1f1f1;
+    border-radius: 2px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+    z-index:2;
+  }
+  .container-onglet
+  {
+     background: #f1f1f1;
+     width: 100%;
+     height: 30%;
+     display: flex;
+     border-bottom: 1px solid #333;
+  }
+  .onglets
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    cursor:pointer;
+  }
+
+  .onglets:not(:nth-child(3))
+  {
+    border-right: 1px solid #333;
+  }
+  .contenu
+  {
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+  }
+  .contenu h3
+  {
+    padding: 20px;
+  }
+  .contenu hr
+  {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+  }
+  .contenu p
+  {
+    padding: 20px;
+  }
+  /*anim */
+  .active
+  {
+    background: midnightblue;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+  }
+  .activeContenu
+  {
+    animation: fade 0.5s forwards;
+  }
+  @keyframes fade
+  {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  /*----------------------------*/
+  /*style de la page contenu*/
+  /*------------------------------*/
+  .content-ges
+  {
+    padding:20px;
+  }
+  .barr
+  {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+  }
+  .content-Caroussel
+  {
+    position:absolute;
+    height:200px;
+    width:98%;
+    background:#fff;
+    display:flex;
+  }
+  .carou
+  {
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .carou:not(:nth-child(3))
+  {
+    border-right: 1px solid #333;
+  }
+  .img-carou
+  {
+    position:relative;
+    top:1px;
+    width:100%;
+    height:150px;
+    background:grey;
+  }
+  .option
+  {
+    position:relative;
+    margin-left:10px;
+  }
+  .img-principale
+  {
+    height:200px;
+    width:50%;
+    background-color: #fff;
+    display:flex;
+  }
+  .img1
+  {
+    width:100%;
+    height:70%;
+    background:grey;
+    align-items:center;
+  }
+  .img1:not(:nth-child(2))
+  {
+    border-right: 1px solid #333;
+  }
+  .option1
+  {
+    position:absolute;
+    bottom:-8px;
+    left:30px;
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .option2
+  {
+    position:absolute;
+    bottom:-8px;
+    right:-28%;
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
   }
 </style>
 <!-- Optional JavaScript -->
