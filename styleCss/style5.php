@@ -315,10 +315,15 @@
   /*--------------------------------*/
   .tab1,.tab3,.tab4,.tab5
   {
+    display:grid;
     background: #fff;
     border: 1px solid grey;
     width: 25%;
-    height: 25%;
+    height: 32%;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
   }
   .tab2
   {
@@ -344,8 +349,40 @@
   {
     transform: translate(20%,40%);
   }
-
-
+   .spanTab
+  {
+    transform: translate(-25%, 25%);
+    font-size: 15px;
+    font-weight: 20px;
+  }
+  .outputTab
+  {
+    font-size: 50px;
+    font-weight: 100px;
+  }
+  div .grpBtn
+  {
+    position: absolute;
+    bottom: 1%;
+    margin-left: 6%;
+  }
+  .button-liste
+  {
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    border-width: 1px;
+  }
+  .button-liste:hover
+  {
+    background: #fff;
+  }
+  .titreListe
+  {
+    font-size: 40px;
+  }
 </style>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
