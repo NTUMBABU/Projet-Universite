@@ -207,7 +207,7 @@
   {
     width: 20%;
     height: 2px;
-    margin-left: 20px;
+    margin-left: 2px;
     background: #000;
     border: none;
   }
@@ -281,6 +281,71 @@
     font-size: 22px;
     font-weight: 700;
   }
+  /****************************/
+  /*STYLE DE LA PAGE ADD USER*/
+  /***************************/
+  /*-------------------------*/
+  form
+  {
+    z-index: 4;
+  }
+  .select li
+  {
+    display: inline;
+  }
+  .div-select
+  {
+    margin-left: -20px;
+    margin-top: 10px;
+  }
+  /*********************************/
+  /*stle pour la page edit profil*/
+  /*------------------------------*/
+  .cadre-profil
+  {
+    background: #fff;
+    padding: 10px;
+    width: 30%;
+    position:absolute;
+    top:50px;
+    left: 50px;
+  }
+  /**************************/
+  /*STYLE DE LA PAGE TABLEAU DE BORD*/
+  /*--------------------------------*/
+  .tab1,.tab3,.tab4,.tab5
+  {
+    background: #fff;
+    border: 1px solid grey;
+    width: 25%;
+    height: 25%;
+  }
+  .tab2
+  {
+    float: right;
+    background: #fff;
+    border: 1px solid grey;
+    width: 30%;
+    height: 25%;
+  }
+  .tab4
+  {
+    transform: translate(175%,-15%);
+  }
+  .tab3
+  {
+    transform: translate(175%,-60%);
+  }
+  .tab5
+  {
+    transform: translate(20%,-113%);
+  }
+  .tab1
+  {
+    transform: translate(20%,40%);
+  }
+
+
 </style>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

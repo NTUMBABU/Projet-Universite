@@ -27,7 +27,7 @@ box-shadow: 5px 5px 10px #adadadad, -5px -5px 10px #eee;z-index:5;">
 </nav>
 
 <div class="sidebar">
-  <a href="mainPg.php" class="in"><img src="/Projet-Universite/multi-media/homepage.ico" alt=""height="30" width="30" id="desktop"> <span>home</span> <div class="info-bull">Page d'accueil</div></a>
+  <!-- <a href="mainPg.php" class="in"><img src="/Projet-Universite/multi-media/homepage.ico" alt=""height="30" width="30" id="desktop"> <span>home</span> <div class="info-bull">Page d'accueil</div></a> -->
   <a href="addPg.php" class="in2"><img src="/Projet-Universite/multi-media/add.ico" alt=""height="30" width="30" id="add"> <span>add</span><div class="info-bull2">Ajouter une annonce</div></a>
   <a href="editPg.php" class="in3"><img src="/Projet-Universite/multi-media/pen.ico" alt=""height="30" width="30" id="modif"> <span>consulte</span><div class="info-bull3">Editer vos annonce</div></a>
   <a href="settingPg.php" class="in4"><img src="/Projet-Universite/multi-media/setting.ico" alt=""height="30" width="30" id="conf"> <span>setting</span><div class="info-bull4">Paramètre</div></a>

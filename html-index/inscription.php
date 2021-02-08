@@ -4,18 +4,14 @@
     <meta charset="utf-8">
     <link rel="icon" href="/Projet-Universite/multi-media/ico-uni.png"/>
     <title>Support des étudiants internationaux</title>
-    <?php
-      require_once '../styleCss/style.php';
-    ?>
+    <?php require_once '../styleCss/style.php';?>
     <script type="text/javascript" src="../JavaScript/main.js"></script>
     <script type="text/javascript" src="main2.js"/>
 
     </script>
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <?php require_once '../insert-php/head.php';?>
     <div class="boxp12">
       <h4>Support des étudiants internationaux</h4>
 
@@ -33,7 +29,7 @@
               <td><input type="text" name="prenom" id="prenom" placeholder="votre prénom"/></td>
             </tr>
             <tr>
-              <td align=left>numéro telephone : </td>
+              <td align=left>Numéro telephone : </td>
               <td><input type="tel" name="tel" id="prenom" placeholder="votre numéro telephone"/></td>
             </tr>
         </table>
@@ -51,8 +47,9 @@
             <td align=left>Sélectionné votre campus : </td>
             <td>
               <select name="selectCamp" class="campus">
+                <option value="" disabled selected>choisir...</option>
                 <option value="roseHill">Rose Hill Campus</option>
-                <option value="pamplemouse"selected>Swami Dayanand Campus</option>
+                <option value="pamplemouse">Swami Dayanand Campus</option>
                 <option value="belAire">Bel air Campus</option>
               </select>
             </td>

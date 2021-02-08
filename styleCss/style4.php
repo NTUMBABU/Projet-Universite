@@ -71,7 +71,7 @@
   .info-bull2
   {
     position: absolute;
-    top: 55px;
+    top: 5px;
     left: 60px;
     background: #17202A;
     color: white;
@@ -91,7 +91,7 @@
   .info-bull3
   {
     position: absolute;
-    top: 120px;
+    top: 55px;
     left: 60px;
     background: #17202A;
     color: white;
@@ -111,7 +111,7 @@
   .info-bull4
   {
     position: absolute;
-    top: 180px;
+    top: 120px;
     left: 60px;
     background: #17202A;
     color: white;
@@ -131,7 +131,7 @@
   .info-bull5
   {
     position: absolute;
-    top: 240px;
+    top: 180px;
     left: 60px;
     background: #17202A;
     color: white;
