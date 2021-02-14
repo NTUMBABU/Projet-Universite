@@ -38,11 +38,11 @@
           <div class="form-group">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address ou Numéro de telephone</label>
-              <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exempl@demail.com" required>
+              <input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="exempl@demail.com" name="nameadmis" required>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="votre mot de passe" required>
+              <input type="password" class="form-control form-control-lg"  placeholder="votre mot de passe" name="passwordadmis" required>
             </div>
             <button type="submit" class="btn btn-primary">Connexion</button>
           </div>
