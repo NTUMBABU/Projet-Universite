@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -32,9 +33,17 @@
   <div class="container">
   <div class="row mt-5">
     <div class="col mt-5">
+
       <div class=" h-100 border border-bg-secondaire mt-1 ms-5 p-5" style="width:85%;">
         <h3 class="pb-3 fs-4 fw-bold text-primary">CONNECTEZ-VOUS EN TANT QU'ADMINISTRATEUR</h3>
-        <form action="../bd/login-admis.php" method="post">
+        <?php
+          if(isset($_SESSION['message']))
+          {
+            echo "<div class='alert alert-danger' role='alert' name='message'>".$_SESSION['message']."</div>";
+            //unset($_SESSION['message']);
+          }
+        ?>
+        <form action="../bd/login-admis.php" method="post"><!--action="../bd/login-admis.php"-->
           <div class="form-group">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address ou Numéro de telephone</label>
@@ -44,7 +53,7 @@
               <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
               <input type="password" class="form-control form-control-lg"  placeholder="votre mot de passe" name="passwordadmis" required>
             </div>
-            <button type="submit" class="btn btn-primary">Connexion</button>
+            <button type="submit" class="btn btn-primary" name="login_btn">Connexion</button>
           </div>
         </form>
       </div>

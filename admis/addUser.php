@@ -207,29 +207,29 @@
         <div class="contenu " data-anim="3">
           <h3>Ajouter un administrateur</h3>
           <hr>
-          <form class="" action="" method="post">
+          <form action="" method="post">
             <table>
               <tr>
                 <td>Nom :</td>
-                <td><input type="text" name="" value="" required></td>
+                <td><input type="text" name="nameAdmis" value="" required></td>
               </tr>
               <tr>
                 <td>Prénom :</td>
-                <td><input type="text" name="" value="" required></td>
+                <td><input type="text" name="prenomAdmis" value="" required></td>
               </tr>
               <tr>
                 <td>numéro de telephone :</td>
-                <td><input type="number" name="" value="" required></td>
+                <td><input type="number" name="numAdmis" value="" required></td>
               </tr>
               <tr>
                 <td>Address mail :</td>
-                <td><input type="email" name="" value="" required></td>
+                <td><input type="email" name="mailAdmis" value="" required></td>
               </tr>
               <tr>
                 <td>Mot de passe :</td>
-                <td><input type="password" name="" value="" required></td>
+                <td><input type="password" name="passAdmis" value="" required></td>
                 <td>Confirme le mot de passe :</td>
-                <td><input type="password" name="" value="" required></td>
+                <td><input type="password" name="confpassAdmis" value="" required></td>
               </tr>
               </table>
               <input type="Submit" value="Soumettre" style="margin-top:40px;background:#3498DB;width:20%;border:none;color:#fff;">

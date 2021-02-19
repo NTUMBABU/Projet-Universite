@@ -5,7 +5,7 @@
   <div class="point-gc">
     <div class="projects">
               <label for="bout">
-                  <samp style="font-size:15px;">Nom d'utilisateur</samp>
+                  <samp style="font-size:15px;">nom utilisateur</samp><!--<?php echo $_SESSION['mailAdmis']?>-->
                   <img src="/Projet-Universite/multi-media/drapeau.jpg" alt="" height="50" width="50" style="border-radius: 50%;">
               </label>
                 <button id="bout"></button>
@@ -25,6 +25,6 @@
   <a href="/Projet-Universite/admis/gesUser.php"><img src="/Projet-Universite/multi-media/member.ico" height="30" width="30"> <span>Gestion d'utilisateur</span></a>
   <a href="/Projet-Universite/admis/gesContent.php"><img src="/Projet-Universite/multi-media/box.ico" height="30" width="30"> <span>Gestion des contenus</span></a>
   <a href="/Projet-Universite/admis/addUser.php"><img src="/Projet-Universite/multi-media/add.ico" height="30" width="30"> <span>Ajouter un utilisateur</span></a>
-  <a href="#"><img src="/Projet-Universite/multi-media/off.ico" height="30" width="30"> <span>Se déconnecter</span></a>
+  <a href="/Projet-Universite/bd/deconnexion.php"><img src="/Projet-Universite/multi-media/off.ico" height="30" width="30"> <span>Se déconnecter</span></a>
 
 </div>
