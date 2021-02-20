@@ -87,7 +87,7 @@
     position: absolute;
     top: 60px;
     padding:10px;
-    background:#f1f1f1;
+    background: #f1f1f1;
     width:200px;
     list-style:none;
     opacity:0;
@@ -280,6 +280,10 @@
     align-items: center;
     font-size: 22px;
     font-weight: 700;
+  }
+  .val_error
+  {
+    color:red;
   }
   /****************************/
   /*STYLE DE LA PAGE ADD USER*/
