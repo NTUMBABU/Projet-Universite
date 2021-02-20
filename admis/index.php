@@ -35,18 +35,20 @@
     <div class="col mt-5">
 
       <div class=" h-100 border border-bg-secondaire mt-1 ms-5 p-5" style="width:85%;">
-
+        <?php if(isset($_GET['error'])){ ?>
+          <div class='alert alert-danger'>Connexion non valide, veuillez réessayer</div>
+        <?php }?>
         <h3 class="pb-3 fs-4 fw-bold text-primary">CONNECTEZ-VOUS EN TANT QU'ADMINISTRATEUR</h3>
         <!-- <div class='alert alert-danger' name='message'> -->
         <form action="../bd/login-admis.php" method="post"><!--action="../bd/login-admis.php"-->
           <div class="form-group">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address ou Numéro de telephone</label>
-              <input type="email" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="exempl@demail.com" name="nameadmis" required>
+              <input type="text" class="form-control form-control-lg" aria-describedby="emailHelp" placeholder="exempl@demail.com" name="nameadmis" >
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-              <input type="password" class="form-control form-control-lg"  placeholder="votre mot de passe" name="passwordadmis" required>
+              <input type="password" class="form-control form-control-lg"  placeholder="votre mot de passe" name="passwordadmis" >
             </div>
             <button type="submit" class="btn btn-primary" name="login_btn">Connexion</button>
           </div>

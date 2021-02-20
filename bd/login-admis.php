@@ -1,4 +1,9 @@
 <?php
+  session_start();
+  $conn = mysqli_connect("localhost", "root", "", "Projet_Universite");
+  if(!$conn){
+    echo "connection failed!";
+  }
 
   if(isset($_POST['nameadmis']) && isset($_POST['passwordadmis']))
   {
@@ -9,50 +14,54 @@
       $data = htmlspecialchars($data);
       return $data;
     }
-    $nameadmis = $_POST['nameadmis'];
-    $passwordadmis = $_POST['passwordadmis'];
-  }else{
+    $nameadmis = validate($_POST['nameadmis']);
+    $passwordadmis = htmlspecialchars($_POST['passwordadmis']); //validate($_POST['passwordadmis']);
+    $passwordadmis = md5($passwordadmis);
+    if(empty($nameadmis))
+    {
+      header("Location: /Projet-Universite/admis/index.php?error=User Name is required");
+      exit();
+    }
+    else if(empty($passwordadmis))
+    {
+      header("Location: /Projet-Universite/admis/index.php?error=Password is required");
+      exit();
+    }
+    else
+    {
+      $sql = "SELECT * FROM singup_admis WHERE AddressMail='$nameadmis' OR 	numTelephone='$nameadmis' AND motDepass='$passwordadmis'";
+      $result = mysqli_query($conn,$sql);// 
+
+      if(mysqli_num_rows($result) === 1)
+      {
+        $row = mysqli_fetch_assoc($result);
+        if($row['AddressMail'] === $nameadmis || $row['numTelephone'] === $nameadmis && $row['motDepass'] === $passwordadmis)
+        {
+          echo "login";
+          $_SESSION['AddressMail'] = $row['AddressMail'];
+          $_SESSION['numTelephone'] = $row['numTelephonel'];
+          $_SESSION['id'] = $row['id'];
+          
+          header("Location: /Projet-Universite/admis/Administrateur.php");
+          exit();
+        }
+        else
+        {
+          header("Location: /Projet-Universite/admis/index.php?error=Incorect User name or password");
+          exit();
+        }
+        
+      }
+      else
+      {
+        header("Location: /Projet-Universite/admis/index.php?error=Incorect User name or password");
+        exit();
+      }
+    }
+  }
+  else
+  {
     header("Location: /Projet-Universite/admis/index.php");
     exit();
-  }
-  // session_start();
-  // //connetion bd
-  // $db = mysqli_connect("localhost", "root", "", "Projet_Universite");
-  // $error="";
-  // $success="";
-
-  // if(isset($_POST['login_btn']))
-  // {
-  //     $mailAdmis = htmlspecialchars($_POST['nameadmis']);
-  //     $passAdmis = htmlspecialchars($_POST['passwordadmis']);
-
-  //     $passAdmis = md5($passAdmis); //se raelle du mot de ass hashe
-  //     $sql = "SELECT * FROM singup_admis WHERE AddressMail='$mailAdmis' AND motDepass='$passAdmis'";
-  //     $result = mysqli_query($db, $sql);
-
-  //     if($mailAdmis == "AddressMail")
-  //     {
-  //       if($passAdmis == "motDepass")
-  //       {
-  //         $error="";
-  //         $success="Welcome Admi!!!";
-  //       }else{
-  //         $error="echec de connexion";
-  //         $success="";
-  //       }
-  //     }else{
-  //       $error="invalide username";
-  //         $success="";
-  //     }
-      // if(mysqli_num_rows($result) == 1)
-      // {
-      //   $_SESSION['message'] = "vous etess connectez";
-      //   $_SESSION['mailAdmis'] = $mailAdmis;
-      //   header('Location: /Projet-Universite/admis/Administrateur.php');
-      // }else{
-      //   $_SESSION['message'] = 'connexion echoue';
-      //   header('Location: /Projet-Universite/admis/index.php');
-        
-      // }
   }
 ?>
