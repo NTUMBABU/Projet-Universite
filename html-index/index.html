@@ -5,17 +5,145 @@
     <link rel="icon" href="/Projet-Universite/multi-media/ico-uni.png"/>
     <title>Support des étudiants internationaux</title>
     <link rel='stylesheet' href='mainA.css' type='text/css' media='screen'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style media="screen">
+    /*animation page index*/
 
+    .slider1,.slider2,.slider3
+    {
+      position: absolute;
+      width: 100%;
+      height: 65%;
+
+    }
+    .slider1
+    {
+      background-image: url(/Projet-Universite/multi-media/main.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: fade1 8s infinite;
+    }
+    .slider2
+    {
+      background-image: url(/Projet-Universite/multi-media/carou1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: fade2 8s infinite;
+    }
+    .slider3
+    {
+      background-image: url(/Projet-Universite/multi-media/carou2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: fade3 8s infinite;
+    }
+    @keyframes fade1
+    {
+      0%
+      {
+        opacity: 1;
+      }
+      25%
+      {
+        opacity: 0;
+      }
+      75%
+      {
+        opacity: 0;
+      }
+      100%
+      {
+        opacity: 1;
+      }
+    }
+    @keyframes fade2
+    {
+      0%
+      {
+        opacity: 0;
+      }
+      25%
+      {
+        opacity: 1;
+      }
+      75%
+      {
+        opacity: 0;
+      }
+      100%
+      {
+        opacity: 0;
+      }
+    }
+    @keyframes fade3
+    {
+      0%
+      {
+        opacity: 0;
+      }
+      25%
+      {
+        opacity: 0;
+      }
+      75%
+      {
+        opacity: 1;
+      }
+      100%
+      {
+        opacity: 0;
+      }
+    }
+    body
+    {
+      animation: transitionIn 0.75s;
+    }
+    @keyframes transitionIn
+    {
+      from
+      {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to
+      {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /*contenue de la div principale*/
+    .boxp1
+    {
+      position: relative;
+      top:330px;
+      left: 50px;
+      width: 94%;
+      height: 900px;
+      flex: 1 0 auto;
+    }
+    .titre1
+    {
+      color: #44BBCA;
+      font-size: 46px;
+      line-height: 1.3;
+      font-weight: bold;
+      position: absolute;
+      top: 60px;
+      left: 10px;
+    }
+    </style>
   </head>
   <body>
-    <img src= "/Projet-Universite/multi-media/main.jpg" alt="main" width="101% auto" height="360" style="margin-left: -1%;
-    margin-top:-1%;
-    z-index: 1;"/>
+    <div class="slider">
+      <div class="slider1"></div>
+      <div class="slider2"></div>
+      <div class="slider3"></div>
+    </div>
+
+
 
     <div class="elipse-logo">
-      <img src="/Projet-Universite/multi-media/elipse.png" alt="floue_background" width="1073" height="585" style="
-
-      position: absolute;
+      <img src="/Projet-Universite/multi-media/elipse.png" alt="floue_background" width="1073" height="585" style="position: absolute;
       top: -200px;
       left: -300px;
       z-index: 1;
@@ -25,16 +153,20 @@
         <a href="https://udm.ac.mu/?lang=fr"><img src="/Projet-Universite/multi-media/mainLogo.png" alt="Logo main" width="303" height="101"/></a>
     </div>
 
-    <!--<div class="tiret">
-      <i></i>
-      <i></i>
-    </div>-->
-      <!--<header>
-
-      </header>-->
     <div class="boxp1">
-      <h4>Support des étudiants internationaux</h4>
-      <h2>Université des Mascareignes, Mauritius<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue dans le support des <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;étudiants internationaux</h2>
+      <h4 style="font-size: 25px;
+        line-height: 1.4;
+        font-weight: bold;
+        color: #44BBCA;
+        position: absolute;
+        top: 100px;">Support des étudiants internationaux</h4>
+      <h2 style="font-size: 42px;
+      font-weight: bold;
+      color: #006CB2;
+      position: absolute;
+      top: 160px;
+      left: 200px;
+      z-index: 6;">Université des Mascareignes, Mauritius<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bienvenue dans le support des <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;étudiants internationaux</h2>
       <div class="box1">
         <img src="/Projet-Universite/multi-media/div-main5.jpg" alt="image3" width="50" height="50"/>
         <h2 class="titre1">Rechercher, contacter & soumettre</h2>
@@ -55,7 +187,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer style="position:absolute;top:1390px;width:101%;">
       <div class="contenu-footer">
         <div class="bloc footer-logo ">
           <ul class="liste-Logo">

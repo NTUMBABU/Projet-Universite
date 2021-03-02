@@ -27,7 +27,6 @@
       }else{
           $_SESSION['message'] = "le deux mot de  passe ne correspond ppas";
           echo "<div class='alert alert-danger'>".$_SESSION['message']."</div>";
-      }
+        }
   }
 ?>
-

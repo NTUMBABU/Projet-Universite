@@ -7,12 +7,16 @@
     <?php require_once '../styleCss/style2.php'; ?>
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+      </div>
+    </header>
     <div class="boxCont2">
       <!-- le heder  -->
-      <h4>Support des étudiants internationaux</h4>
+      <h4 class="titre11">Liste des maisons disponibles</h4>
       <div class="id-user">
 
       </div>
@@ -26,7 +30,7 @@
             </div>
             <div class="info-M">
               <output name="adrr">Rose-Hill</output><br>
-              <output name="prix" style="color:red;">Rs 10000</output>
+              <output name="prix" style="color:red;">Rs 00000</output>
               <output name="type">Maison</output>
             </div>
           </div>
@@ -40,7 +44,7 @@
             </div>
             <div class="info-M">
               <output name="adrr">Quatre-Borne</output><br>
-              <output name="prix" style="color:red;">Rs 120000</output>
+              <output name="prix" style="color:red;">Rs 00000</output>
               <output name="type">Maison</output>
             </div>
           </div>
@@ -48,14 +52,14 @@
     </a>
 
     <a href="#">
-      
+
           <div class="maison3">
             <div class="presentation">
               <img src="/Projet-Universite/multi-media/test.jpg" alt="première image">
             </div>
             <div class="info-M">
               <output name="adrr">Port-Luis</output><br>
-              <output name="prix" style="color:red;"> Rs 4000</font> </output>
+              <output name="prix" style="color:red;"> Rs 0000</font> </output>
               <output name="type">Chambre</output>
             </div>
           </div>

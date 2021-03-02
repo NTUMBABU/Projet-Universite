@@ -1,12 +1,37 @@
 <style type="text/css" media="screen">
-
+body
+{
+  animation: transitionIn 0.75s;
+}
+@keyframes transitionIn
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contenu {
+  /* grow shrink basis */
+  flex: 1 0 auto;
+}
 .box80/*contenaire principale*/
 {
   position: relative;
+  top:100px;
   left: 50px;
   width: 94%;
   height: 900px;
   /*background: #9b9bff;*/
+}
+.titre11
+{
+  z-index:-2;
 }
 .profil-C img
 {
@@ -324,7 +349,7 @@ div .contenu
   width: 55%;
   /* border: 1px solid grey; */
   position: absolute;
-  top: 76%;
+  top: 87%;
   right: 2%;
 }
 li

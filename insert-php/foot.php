@@ -1,16 +1,20 @@
 <style type="text/css" media="screen">
 /*-------------pour les footer------------------*/
+h1 {
+  font-size: 10vw;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
 footer
 {
-  margin-left: -1%;
   flex-shrink: 0;
   border-top: 0px;
-  width: 101% auto;
+  width: 100%;
   background: #006CB2;
   color: #FFFFFF;
 }
-.contenu-footer/*positionement du  contenu du footer*/
-{
+.contenu-footer {
   width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -19,31 +23,36 @@ footer
   font-size: 20px;
   padding: 50px 0 100px;
 }
-.bloc
-{
+
+.bloc {
   width: 25%;
   margin: 0 30px;
 }
 
-/*titre*/
-.footer-services h3,
+/* contact */
+..footer-services h3,
 .footer-limoge h3,
 .footer-reseaux h3
 {
   font-size: 16px;
   padding-bottom: 10 px;
 }
+
+.footer-contact p {
+  padding: 5px 0;
+}
+
 .footer-services/*taille des texte dans la liste srevice*/
 {
   font-size: 12px;
 }
+
 .footer-logo/*positionnement du logo footer*/
 {
   /*position: relative;*/
   position: relative;
   right: 30px;
 }
-/*liste*/
 .liste-Logo,
 .liste-services,
 .liste-limoge,
@@ -51,7 +60,6 @@ footer
 {
   list-style-type: none;
 }
-
 .liste-services li
 {
   padding: 2px 0;
@@ -61,6 +69,7 @@ footer
   text-decoration: none;
   color: #FFFFFF;
 }
+
 .liste-services a:hover/*pour fair les hover flo sur les liens de liste*/
 {
   color: rgb(3, 3, 3);

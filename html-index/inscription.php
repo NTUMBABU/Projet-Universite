@@ -11,22 +11,31 @@
     </script>
   </head>
   <body>
-    <?php require_once '../insert-php/head.php';?>
-    <div class="boxp12">
-      <h4>Support des étudiants internationaux</h4>
-
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <a href="/Projet-Universite/html-index/identification.php"><input type="button" name="" class="connect" value="Se connecter"></a>
+      </div>
+    </header>
+    <div class="contenu">
+      <!-- <h4>Support des étudiants internationaux</h4> -->
       <div class="div_pg3">
         <form action="../bd/singUp-etudiant.php" class="form_id" method="post">
 
-          <h3 class="titre1">S'inscrire</h3>
+          <h3 class="titre1">Créez votre compte</h3>
           <table class="tableau1">
             <tr>
-              <td align=left>Nom  : </td>
+              <td align=left>Nom  : <span style="color:red;">*</span> </td>
               <td><input type="text" name="nom" id="nom" placeholder="votre nom"></td>
             </tr>
             <tr>
-              <td align=left>Prénom : </td>
+              <td align=left>Prénom : <span style="color:red;">*</span></td>
               <td><input type="text" name="prenom" id="prenom" placeholder="votre prénom"/></td>
+            </tr>
+            <tr>
+              <td align=left>Adresse e-mail : <span style="color:red;">*</span></td>
+              <td> <input type="mail" name="mail" id="prenom" placeholder="votreAdresse@email"> </td>
             </tr>
             <tr>
               <td align=left>Numéro telephone : </td>
@@ -37,29 +46,47 @@
         <table class="tableau1">
           <tr>
             <td align=left>Filère  : </td>
-            <td><input type="text" name="filier" id="filier" placeholder="votre filère"></td>
+            <td>
+              <select name="selectFilier" class="campus">
+                <option value="" disabled selected>choisir...</option>
+                <optgroup label="Faculté de commerce et de gestion">
+                  <option value="Compatabalité et finabce">Compatabalité et finabce</option>
+                  <option value="Services bancaires et financiers">Services bancaires et financiers</option>
+                  <option value="Gestion des ressources humaines">Gestion des ressources humaines</option>
+                  <option value="Marketing">Marketing</option>
+                </optgroup>
+                <optgroup label="Faculté de développement durable et d'ingénierie">
+                  <option value="Génie civil">Génie civil</option>
+                  <option value="Génie électique et électronique">Génie électique et électronique</option>
+                  <option value="Génie électique et automatisation">Génie électique et automatisation</option>
+                </optgroup>
+                <optgroup label="Faculté des technologies de l'information et de la communication">
+                  <option value="Informatique appliquée">Informatique appliquée</option>
+                  <option value="Conception graphique et multimédia">Conception graphique et multimédia</option>
+                </optgroup>
+            </select>
+            </td>
           </tr>
           <tr>
-            <td align=left>Date première année  : </td>
+            <td align=left>Date première année  : <span style="color:red;">*</span></td>
             <td><input type="date" name="date" id="date"/></td>
           </tr>
           <tr>
-            <td align=left>Sélectionné votre campus : </td>
+            <td align=left>Sélectionné votre campus : <span style="color:red;">*</span></td>
             <td>
               <select name="selectCamp" class="campus">
                 <option value="" disabled selected>choisir...</option>
                 <option value="roseHill">Rose Hill Campus</option>
                 <option value="pamplemouse">Swami Dayanand Campus</option>
-                <option value="belAire">Bel air Campus</option>
               </select>
             </td>
           </tr>
           <tr>
-            <td align=left>Mot de passe : </td>
+            <td align=left>Mot de passe : <span style="color:red;">*</span></td>
             <td><input type="password" name="password" id="password" placeholder="mot de passe"/></td>
           </tr>
           <tr>
-            <td align=left>Confirme le Mot de passe : </td>
+            <td align=left>Confirme le Mot de passe : <span style="color:red;">*</span></td>
             <td><input type="password" name="password" id="password" placeholder="Confirme le Mot de passe" /></td>
           </tr>
         </table>
@@ -68,19 +95,48 @@
         <br>
         <div class="div-confirme">
           <ul class="confirmation">
-            <li>Êtes-vous déjà installé à l'ile Maurice ? :&nbsp;&nbsp;</li>
+            <li>Êtes-vous déjà installé à l'ile Maurice ? :&nbsp;&nbsp;<span style="color:red;">*</span></li>
             <li>
-              <input type="radio" name="confirme" id="oui"> <label>Oui&nbsp;&nbsp;</label>
+              <input type="radio" name="conf" id="yes"  onclick=montre(100)> <label>Oui&nbsp;&nbsp;</label>
             </li>
             <li>
-              <input type="radio" name="confirme" id="non"> <label>Non</label>
+              <input type="radio" name="conf" id="no" onclick=hideme(100)> <label>Non</label>
             </li>
           </ul>
-          <div class="option1">
-
+          <br>
+          <div id="option1">
+            <table>
+              <tr>
+                <td td align=left>Mail de l'université :</td>
+                <td><input type="mail" name="" id="mailUni" placeholder="votreAdresse@mail.com"></td>
+              </tr>
+              <tr>
+                <td td align=left>matricule :<span style="color:red;">*</span></td>
+                <td> <input type="text" name="" value="" id="matUni" placeholder="votre matricule ici"> </td>
+              </tr>
+              <tr>
+                <td td align=left>
+                  <span style="text-align: justify;">Souhaite-vous vous faire contacter par les étudiants nouvellement
+                  inscrits à l'université de MASCAREIGNES mais n'étant pas à Maurice <span style="color:red;">*</span></span>
+                </td>
+              </tr>
+              <tr>
+                <td td align=left>
+                    <input type="radio" name="confirme" id="oui"> <label>Oui</label>
+                </td>
+                <td>
+                    <input type="radio" name="confirme" id="non"><label>Non</label>
+              </td>
+              </tr>
+            </table>
           </div>
-          <div class="option2">
-
+          <div id="option2">
+            <table>
+              <tr>
+                <td td align=left><span>Insérer le numéro de matricule inclut sur votre lettre de confirmation à l'université : <span style="color:red;">*</span></span></td>
+                <td><input type="text" name="numMat" id="numMat" placeholder="Exemple: 5696652"></td>
+              </tr>
+            </table>
           </div>
         </div>
 
@@ -89,27 +145,28 @@
           <br>
           <div class="boutton_soumetre"><input type="submit" name="button" id="button" value="Valider" onclick="togglePopup()"></input></div>
 
-
         </form>
       </div>
-    </div>
-
-    <!--popup-->
-    <div class="popup" id="popup-1">
-      <div class="photo_profil">
-        <img src="/Projet-Universite/multi-media/profil.png" alt="phpot profil" id="profile">
-        <input type="file" id="file">
-      </div>
-      <div class="min-label">
-        <label for="file" id="uploadBtn">Cliquez ici pour insere une photo de profile</label>
-      </div>
-      <input type="button" name="close" id="close" value="Plus tard">
-      <div class="close-popup" onclick="togglePopup()">&times;</div>
-    </div>
-    <?php
-      require_once '../insert-php/foot.php';
-     ?>
+<p style="margin-bottom:50px;"></p>
+</div>
+    <?php require_once '../insert-php/foot.php';?>
   </body>
-  <!-- ne pas oublie de mettre les petit detail comme enleve
-les titre dasn le hedera dasn le h4-->
+  <script type="text/javascript" src="jquery.js">
+	</script>
+	<script>
+  //var numMat= document.getElementById("numMat").value;
+		function hideme()
+		{
+			$("#option1").fadeOut();
+			$("#option2").fadeIn();
+      document.getElementById("mailUni").value="";
+      document.getElementById("matUni").value="";
+		}
+		function montre()
+		{
+			$("#option1").fadeIn();
+			$("#option2").fadeOut();
+      document.getElementById("numMat").value="";
+		}
+	</script>
 </html>

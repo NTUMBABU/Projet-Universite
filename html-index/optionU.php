@@ -7,15 +7,16 @@
     <?php require_once '../styleCss/style2.php'; ?>
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+      </div>
+    </header>
     <!-- le heder  -->
     <div class="boxCont1">
-      <h4>Support des étudiants internationaux</h4>
-      <div class="id-user">
-
-      </div>
+      <h4 class="titre11">Les options disponibles</h4>
 
       <!-- les option -->
       <a href="locatioM.php"><div class="option1">

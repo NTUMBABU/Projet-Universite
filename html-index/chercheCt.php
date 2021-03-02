@@ -7,12 +7,16 @@
     <?php require_once '../styleCss/style3.php'; ?>
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+      </div>
+    </header>
     <!-- Main -->
     <div class="box80">
-      <h4>Support des étudiants internationaux</h4>
+      <h4 class="titre11">Support des étudiants internationaux</h4>
 
       <div class="contact1">
         <div class="profil-C">

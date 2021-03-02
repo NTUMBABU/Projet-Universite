@@ -1,3 +1,12 @@
+<?php session_start();
+  if(isset($_SESSION['id']) && isset($_SESSION['mailAnnonceur']))
+  {
+
+  }else{
+    header("Location: /Projet-Universite/admis/index.php");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>

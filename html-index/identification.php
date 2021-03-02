@@ -10,11 +10,14 @@
 
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+      </div>
+    </header>
     <div class="boxp11">
-      <h4>Support des étudiants internationaux</h4>
+      <!-- <h4>Support des étudiants internationaux</h4> -->
 
       <div class="div_pg2">
         <form action="../bd/login-etudiant.php" class="form_id" method="post">
@@ -44,9 +47,7 @@
         </ul>
       </div>
     </div>
-    <?php
-      require_once '../insert-php/foot.php';
-     ?>
+    <!-- <?php require_once '../insert-php/foot.php'; ?> -->
   </body>
   <!-- ne pas oublie de mettre les petit detail comme enleve
 les titre dasn le hedera dasn le h4-->

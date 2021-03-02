@@ -5,24 +5,18 @@
     <title></title>
     <link rel="icon" href="/Projet-Universite/multi-media/ico-uni.png"/>
     <?php require_once '../styleCss/style3.php'; ?>
-    <script type="text/javascript">
-      function gallery(element_img)
-      {
-        var imgPreview = document.getElementById('imgPreview');
-        console.log(element_img);
-        imgPreview.src = element_img.firstElementChild.src;
-      }
-    </script>
 
   </head>
   <body>
-    <?php
-      require_once '../insert-php/head.php';
-    ?>
+    <header>
+      <?php require_once '../insert-php/head2.php'; ?>
+      <div class="headert">
+        <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+      </div>
+    </header>
     <!-- Main -->
     <div class="box90">
-
-
       <div class="gallery">
         <div class="boutton">
           <img src="/Projet-Universite/multi-media/dow.png" alt="">
@@ -114,13 +108,16 @@
           id est laborum</p>
 
       </div>
-
-
-
     </div>
-
-
     <!-- footer -->
       <?php require_once '../insert-php/foot.php'; ?>
   </body>
+  <script type="text/javascript">
+    function gallery(element_img)
+    {
+      var imgPreview = document.getElementById('imgPreview');
+      console.log(element_img);
+      imgPreview.src = element_img.firstElementChild.src;
+    }
+  </script>
 </html>

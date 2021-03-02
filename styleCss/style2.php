@@ -1,15 +1,35 @@
 <style type="text/css" media="screen">
-
+body
+{
+  animation: transitionIn 0.75s;
+}
+@keyframes transitionIn
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   .boxCont1/*contenaire principale*/
   {
 
     position: relative;
+    top: 100px;
     left: 50px;
     width: 94%;
     height: 800px;
     /*background: #9b9bff;*/
   }
-
+  .titre11
+  {
+    z-index:-2;
+  }
   .id-user
   {
     width: 80px;
@@ -82,6 +102,7 @@
 .boxCont2/*contenaire principale*/
 {
   position: relative;
+  top:100px;
   left: 50px;
   width: 94%;
   height: 800px;
@@ -164,6 +185,5 @@
 }
 
 /* ----------------------------------------------------------------- */
-
 
 </style>
