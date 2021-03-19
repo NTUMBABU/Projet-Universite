@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=projet_universite','root', '');
+
+  if(isset($_SESSION['id']))
+  {
+?>
+<?php
+  $annonce = $bdd->query('SELECT * FROM annonce_annonceur ORDER BY date_publication DESC');
+
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -11,7 +22,7 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
-        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+        <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" name="" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
     <div class="boxCont2">
@@ -22,52 +33,40 @@
       </div>
 
       <!-- les maison -->
-      <a href="detailM.php">
-
+      <?php while($a = $annonce->fetch()){?>
+      <a href="detailM.php?id=<?= $a['id']?>">
           <div class="maison1">
             <div class="presentation">
               <img src="/Projet-Universite/multi-media/test.jpg" alt="première image">
             </div>
             <div class="info-M">
-              <output name="adrr">Rose-Hill</output><br>
-              <output name="prix" style="color:red;">Rs 00000</output>
-              <output name="type">Maison</output>
+              <span><?= $a['tag']?></spant><br>
+              <output name="prix" style="color:red;"><?= $a['prix_maison']?></output>
+              <span>Maison</span>
+              <br>
+              <output name="prix" style="color:red;"><?= $a['prix_chambre']?></output>
+              <span>Chambre</span>
+              <br>
+              <output name="prix" style="color:red;"><?= $a['prix_par_personne']?></output>
+              <span>Personne</span>
+            </div>
+            <div align="right" class="temp">
+              <span><?= $a['date_publication']?></span>
             </div>
           </div>
-    </a>
+        </a>
 
-    <a href="#">
-
-          <div class="maison2">
-            <div class="presentation">
-              <img src="/Projet-Universite/multi-media/test.jpg" alt="première image">
-            </div>
-            <div class="info-M">
-              <output name="adrr">Quatre-Borne</output><br>
-              <output name="prix" style="color:red;">Rs 00000</output>
-              <output name="type">Maison</output>
-            </div>
-          </div>
-
-    </a>
-
-    <a href="#">
-
-          <div class="maison3">
-            <div class="presentation">
-              <img src="/Projet-Universite/multi-media/test.jpg" alt="première image">
-            </div>
-            <div class="info-M">
-              <output name="adrr">Port-Luis</output><br>
-              <output name="prix" style="color:red;"> Rs 0000</font> </output>
-              <output name="type">Chambre</output>
-            </div>
-          </div>
-        </div>
-  </a>
+  <?php }?>
+</div>
     <!-- le footer -->
     <?php require_once '../insert-php/foot.php'; ?>
 
 
   </body>
 </html>
+<?php
+}
+else{
+  header("Location:/Projet-Universite/html-index/identification.php");
+}
+?>

@@ -54,4 +54,19 @@
     height: 40px;
     width: auto;
   }
+  .edition_profil
+  {
+    position: absolute;
+    right:150px;
+    top:20px;
+    border: none;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #016bb2;
+    height: 40px;
+    width: auto;
+  }
 </style>

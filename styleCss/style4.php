@@ -211,6 +211,13 @@
     position: relative;
     right: auto;
     border: 1px solid black;
+    z-index: 1;
+  }
+  #mapid
+  {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(7, 7, 7);
     z-index: -1;
   }
   #insert1,#insert2,#insert3,#insert4,#insert5,#insert-v1,#insert-v2

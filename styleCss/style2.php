@@ -46,7 +46,7 @@ body
   .option1
   {
     width: 60%;
-    height: 210px;
+    height: auto;
     position: absolute;
     top: 25%;
     left: 10%;
@@ -66,7 +66,7 @@ body
   .option2
   {
     width: 60%;
-    height: 210px;
+    height: auto;
     position: absolute;
     top: 60%;
     left: 10%;
@@ -109,8 +109,11 @@ body
   /*background: #9b9bff;*/
 }
 
-.maison1, .maison2, .maison3
+.maison1
 {
+  top: 25%;
+  transform: translate(1%, 50%);
+
   width: 60%;
   height: 200px;
 
@@ -121,36 +124,15 @@ body
   color: #222;
 
 }
-.maison1:hover, .maison2:hover, .maison3:hover
+.maison1:hover
 {
   background-color: #D6EAF8;
-}
-
-.maison1
-{
-  position: absolute;
-  top: 15%;
-  transform: translate(1%);
-
-}
-
-.maison2
-{
-  position: absolute;
-  top: 43%;
-  transform: translate(1%);
-}
-
-.maison3
-{
-  position: absolute;
-  top: 71%;
-  transform: translate(1%);
-}
-.maison1:hover, .maison2:hover, .maison3:hover
-{
-  box-shadow: 5px 5px 10px #adadadad, -5px -5px 10px #eee;
   cursor: pointer;
+}
+.temp
+{
+  margin: 20px;
+  font-size: 15px;
 }
 /* contenu de l'image */
 .presentation img
@@ -179,7 +161,7 @@ body
   right: 13%;
   /* border: 1px solid grey; */
   text-align: left;
-  line-height: 65px;
+  line-height: 35px;
   font-size: 15px;
   padding-top: 15px;
 }

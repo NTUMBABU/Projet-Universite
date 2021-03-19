@@ -1,3 +1,38 @@
+<?php
+  session_start();
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=projet_universite','root', '');
+
+  if(isset($_SESSION['id']))
+  {
+?>
+<?php
+  if(isset($_GET['id']) AND !empty($_GET['id']))
+  {
+    $get_id = htmlspecialchars($_GET['id']);
+
+    $an = $bdd->prepare('SELECT * FROM annonce_annonceur WHERE id = ?');
+    $an->execute(array($get_id));
+
+    //pour verifier si l'article exite dans le tableau
+    if($an->rowCount() == 1)
+    {
+      $an = $an->fetch();
+      $rue = $an['rue'];
+      $quartier = $an['quartier'];
+      $ville = $an['ville'];
+      $district = $an['district'];
+      $restriction = $an['note_restriction'];
+    }
+    else
+    {
+      die('cette annonce n\'est pas disponible');
+    }
+  }
+  else
+  {
+    die("Erreur 404");
+  }
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -5,14 +40,21 @@
     <title></title>
     <link rel="icon" href="/Projet-Universite/multi-media/ico-uni.png"/>
     <?php require_once '../styleCss/style3.php'; ?>
-
+    <!-- API pour la map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
   </head>
   <body>
     <header>
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
-        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+        <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" name="" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
     <!-- Main -->
@@ -64,9 +106,10 @@
       </div>
 
 
-      <div class="map"></div>
-      <output name="result" class="addr">Ave Nubee Staley Camp Levieux Rose hill</output>
-
+      <div class="map"><div id="mapid"></div></div>
+      <output class="addr">Ave <?= $rue ?> <?= $quartier ?> <?= $ville ?> <?= $district ?></output>
+      <input type="text" name="" value="">
+      <input type="text" name="" value="">
 
       <div class="id-bail">
         <div class="profil-bail">
@@ -99,19 +142,38 @@
       </div>
       <div class="restric-maison">
         <h6>Note et restriction de la maison</h6>
-        <p class="restt-maison">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-          id est laborum</p>
+        <p class="restt-maison"><?= $restriction ?></p>
 
       </div>
     </div>
     <!-- footer -->
       <?php require_once '../insert-php/foot.php'; ?>
   </body>
+  <script>
+ function init()
+ {
+     const parcThabor = {
+         lat: -20.2220221,
+         lng: 57.6000000
+     }
+
+     const zoomLevel = 10;
+
+     const map = L.map('mapid').setView([parcThabor.lat, parcThabor.lng],zoomLevel);
+
+     const mainLayer = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+         maxZoom: 18,
+         id: 'mapbox/streets-v11',
+         tileSize: 512,
+         zoomOffset: -1,
+         accessToken: 'pk.eyJ1IjoibnR1bWJhYnUiLCJhIjoiY2ttYWtkZG9rMXNzNTJwanhqZnd2cWsxbyJ9.q1TN9ZCwm-Q8z5hfsfOegw'
+     });
+
+     mainLayer.addTo(map);
+ }
+ init();
+</script>
   <script type="text/javascript">
     function gallery(element_img)
     {
@@ -121,3 +183,9 @@
     }
   </script>
 </html>
+<?php
+}
+else{
+  header("Location:/Projet-Universite/html-index/identification.php");
+}
+?>

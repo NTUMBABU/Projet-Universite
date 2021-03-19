@@ -1,8 +1,19 @@
+<?php
+  session_start();
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=projet_universite','root', '');
+
+  if(isset($_GET['id']) AND $_GET['id'] > 0)
+  {
+    $getid = intval($_GET['id']);
+    $requser = $bdd->prepare('SELECT * FROM tbl_etudiant WHERE id = ?');
+    $requser->execute(array($getid));
+    $userinfo = $requser->fetch();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Rechercher d'une maison</title>
+    <title>Les options disponibles</title>
     <link rel="icon" href="/Projet-Universite/multi-media/ico-uni.png"/>
     <?php require_once '../styleCss/style2.php'; ?>
   </head>
@@ -11,7 +22,9 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
-        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+        <h5>Compte de <?php echo $userinfo['nom'];?> </h5>
+        <a href="/Projet-Universite/html-index/edition_profil.php"><input type="button" class="edition_profil" value="Editer votre profil"></a>
+        <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
     <!-- le heder  -->
@@ -41,3 +54,9 @@
 
   </body>
 </html>
+<?php
+}
+else{
+  header("Location:/Projet-Universite/html-index/identification.php");
+}
+?>

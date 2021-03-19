@@ -20,12 +20,15 @@
       <!-- <h4>Support des étudiants internationaux</h4> -->
 
       <div class="div_pg2">
+        <?php if(isset($_GET['error'])){ ?>
+          <div align="center" style="margin-bottom:20px;color:red;font-size:15px;">Échec de la connexion, veuillez réessayer</div>
+        <?php }?>
         <form action="../bd/login-etudiant.php" class="form_id" method="post">
           <h3 class="titre1">S'identifier</h3>
           <table class="tableau1">
             <tr>
-              <td align=left>Identifiant : </td>
-              <td><input type="text" name="identifiant" id="identifiant" placeholder="numéro telephone/adresse mail" required></td>
+              <td align=left>Mail : </td>
+              <td><input type="text" name="identifiant" id="identifiant" placeholder="numéro telephone/adresse mail"></td>
             </tr>
             <tr>
               <td align=left>Mot de passe : </td>

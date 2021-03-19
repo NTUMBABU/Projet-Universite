@@ -111,19 +111,13 @@ footer
       <h3>À propos de nous</h3>
       <ul class="liste-services">
         <li>
-          <a href="https://udm.ac.mu/vision-mission-values/">Vision, mission et valeurs</a>
+          <a href="#">Notre site</a>
         </li>
         <li>
-          <a href="https://udm.ac.mu/chairperson-message/">Message du président</a>
+          <a href="#">infos legales</a>
         </li>
         <li>
-          <a href="https://udm.ac.mu/history/">L'histoire</a>
-        </li>
-        <li>
-          <a href="https://udm.ac.mu/board-members/">Membres du conseil<br/> d'administration</a>
-        </li>
-        <li>
-          <a href="https://udm.ac.mu/staff-profile/">Profil du personnel</a>
+          <a href="#">Nous contacter</a>
         </li>
       </ul>
     </div>

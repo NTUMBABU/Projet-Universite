@@ -319,17 +319,25 @@ div .contenu
 .map
 {
   position: absolute;
-  height: 40%;
-  width: 37%;
-  top: 0%;
-  right: 2%;
+  height: 37%;
+  width: 40%;
+  top: 10%;
+  right: 0%;
   overflow: hidden;
   border: 1px solid grey;
+  z-index: 1;
+}
+#mapid
+{
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(7, 7, 7);
+  z-index: -1;
 }
 .addr
 {
   position:absolute;
-  top: 42%;
+  top: 48%;
   right: 15%;
   font-size: 15px;
 }

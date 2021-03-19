@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  $bdd = new PDO('mysql:host=127.0.0.1;dbname=projet_universite','root', '');
+
+  if(isset($_SESSION['id']))
+  {
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -11,7 +18,7 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
-        <a href=""><input type="button" name="" class="connect" value="Se déconnecter"></a>
+        <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
     <!-- Main -->
@@ -92,3 +99,9 @@
     <?php require_once '../insert-php/foot.php'; ?>
   </body>
 </html>
+<?php
+}
+else{
+  header("Location:/Projet-Universite/html-index/identification.php");
+}
+?>

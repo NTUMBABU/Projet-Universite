@@ -48,13 +48,13 @@ body{
   .div_pg2/*la div du formulaire*/
   {
     background-color: #F2F3F4;
-    height: 345px;
+    height: auto;
     width: 570px;
     border-radius: 5px;
 
     padding: 40px;
     position: relative;
-    top: 200px;
+    top: 150px;
     left: 300px;
 
     overflow: hidden;
