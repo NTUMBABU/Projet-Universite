@@ -19,6 +19,9 @@
     <?php require_once '../insert-php/espAnnonceur.php' ?>
     <div class="contenu">
       <div class="row mt-0">
+        <?php if(isset($_GET['succer'])){ ?>
+          <div class='alert alert-success'>Votre soumission a bien été postée!</div>
+        <?php }?>
           <form action="../bd/inPut-annonceur.php" method="post" enctype="multipart/form-data" class="row h-100 g-3 border border-bg-secondaire mb-5 p-5">
             <h3 class="pb-3 fs-2 fw-bold text-primary">Insérer l'adresse de la maison </h3>
             <div class="col-sm-2">
@@ -214,7 +217,7 @@
                   <source id="source" type="video/mp4">
                 </video>
                 <div class="card-body">
-                  <input type="file"  id="insert-v1" name="file" accept="video/*" onchange="selectedVideo(this);"/>
+                  <input type="file"  id="insert-v1" name="file_video1" accept="video/*" onchange="selectedVideo(this);"/>
                   <label for="insert-v1">
                     <a class="btn btn-primary">Insérer</a>
                   </label>
@@ -225,7 +228,7 @@
                   <source id="source2" type="video/mp4">
                 </video>
                 <div class="card-body">
-                  <input type="file"  id="insert-v2" name="file" accept="video/*" onchange="selectedVideo2(this);"/>
+                  <input type="file"  id="insert-v2" name="file_video2" accept="video/*" onchange="selectedVideo2(this);"/>
                   <label for="insert-v2">
                     <a class="btn btn-primary">Insérer</a>
                   </label>

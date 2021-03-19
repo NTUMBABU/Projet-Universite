@@ -26,28 +26,34 @@ body
   top:100px;
   left: 50px;
   width: 94%;
-  height: 900px;
+  height: 950px;
   /*background: #9b9bff;*/
 }
 .titre11
 {
+  position: relative;
+  margin-bottom: 50px;
   z-index:-2;
 }
 .profil-C img
 {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
 
 }
-.contact1, .contact2,.contact3, .contact4,.contact5, .contact6
+.contact1
 {
+  position: relative;
+  margin: 1px;
   border: 1px solid grey;
   height: 350px;
   width: 24%;
   cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
 }
-div.contact1:hover,.contact2:hover,.contact3:hover,.contact4:hover,.contact5:hover,.contact6:hover:hover
+div.contact1:hover
 {
   background: #006CB2;
   color: #fff;
@@ -59,8 +65,8 @@ div .contenu
   /* border: 1px solid grey; */
   width:70%;
   height: 30%;
-  position: absolute;
-  bottom: 5%;
+  position: relative;
+  bottom: -15%;
   left: 15%;
   text-align: center;
   line-height: 200%;
@@ -74,47 +80,21 @@ div .contenu
   border-radius: 50%;
   height: 180px;
   width: 60%;
-  position: absolute;
+  position: relative;
   top: 10%;
   left: 20%;
   background: #fff;
+}
+.cadrage
+{
+  /* border: 1px solid black; */
+  padding: 0px;
+  position: relative;
+  margin: 0 auto;
+  font-size: 0;
+  width: 100%;
+  height: auto;
 
-}
-.contact1
-{
-  position: absolute;
-  top: 15%;
-  transform: translate(9%);
-}
-.contact2
-{
-  position: absolute;
-  top: 15%;
-  transform: translate(109%);
-}
-.contact3
-{
-  position: absolute;
-  top: 15%;
-  transform: translate(209%);
-}
-.contact4
-{
-  position: absolute;
-  top: 15%;
-  right: 2%;
-}
-.contact5
-{
-  position: absolute;
-  top: 54%;
-  transform: translate(9%);
-}
-.contact6
-{
-  position: absolute;
-  top: 54%;
-  transform: translate(109%);
 }
 
 /* -------------------------------------------- ------------------------------------*/
@@ -123,15 +103,15 @@ div .contenu
   position: relative;
   left: 50px;
   width: 94%;
-  height: 1000px;
+  /* height: 1000px; */
   /* background: #9b9bff; */
 }
 .id-bail
 {
-  /* border: 1px solid grey; */
+  /* border: 1px solid red; */
   position: relative;
-  height: 15%;
-  width: 55%;
+  height: 180px;
+  width: 65%;
   margin: 5% 2% auto;
 }
 .profil-bail
@@ -195,20 +175,18 @@ div .contenu
 .gallery
 {
   position: relative;
-  height: 51%;
   width: 55%;
-  margin: 8% 2% auto;
-  overflow: hidden;
+  margin-top:10%;
   /* border: 1px solid grey; */
 }
 .boutton
 {
   border: 1px solid #006CB2;
   width: 20%;
-  height: 7%;
-  position: absolute;
-  top: 30%;
-  right: 1%;
+  height: 40px;
+  position: relative;
+  float: right;
+  top: 100px;
   z-index: 5;
   color: #fff;
   background-color: #006CB2;
@@ -231,8 +209,8 @@ div .contenu
   width: 8%;
   height: 10%;
   position: absolute;
-  top: 15%;
-  right: 13%;
+  float: right;
+  right: 1px;
   z-index: 5;
 }
 .full img
@@ -250,8 +228,9 @@ div .contenu
 .gallery .img-preview
 {
   position: relative;
-  height: 70%; /*momentanement */
-  width: 77%;
+  height: 60%; /*momentanement */
+  width: 75%;
+  top: -80px;
   overflow: hidden;
 
 }
@@ -263,19 +242,20 @@ div .contenu
 }
 .gallery .sous-img
 {
-  position: absolute;
+  position: relative;
   height: 20%;
   width: 100%;
   display: flex;
   transition: 0.5s ease-in-out;
   z-index: 1;
-  bottom: 0%;
+
   overflow: hidden;
   /* border: 1px solid blue; */
 }
 .l1
 {
   margin-left: 3%;
+  margin-top: -20%;
 }
 .l2
 {
@@ -338,7 +318,7 @@ div .contenu
 {
   position:absolute;
   top: 48%;
-  right: 15%;
+  right: 8%;
   font-size: 15px;
 }
 .detail-maison
@@ -357,7 +337,7 @@ div .contenu
   width: 55%;
   /* border: 1px solid grey; */
   position: absolute;
-  top: 87%;
+  top: 79%;
   right: 2%;
 }
 li
@@ -376,7 +356,7 @@ h6
 }
 .restt-maison
 {
-  text-align: justify;
+  text-align: left;
 }
 
 /*-------------------------------------------------------*/

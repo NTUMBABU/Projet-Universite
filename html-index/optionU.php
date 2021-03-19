@@ -22,7 +22,7 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
-        <h5>Compte de <?php echo $userinfo['nom'];?> </h5>
+        <h5>Vous êtes connecté en tant que <?php echo $userinfo['nom'];?> </h5>
         <a href="/Projet-Universite/html-index/edition_profil.php"><input type="button" class="edition_profil" value="Editer votre profil"></a>
         <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" class="connect" value="Se déconnecter"></a>
       </div>

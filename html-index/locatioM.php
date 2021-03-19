@@ -22,6 +22,8 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <?php $home = $_SESSION['id'];?>
+          <a href="/Projet-Universite/html-index/optionU.php?id=<?= $home['id']?>"><input type="button" class="edition_profil" value="Home"></a>
         <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" name="" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
@@ -41,14 +43,13 @@
             </div>
             <div class="info-M">
               <span><?= $a['tag']?></spant><br>
-              <output name="prix" style="color:red;"><?= $a['prix_maison']?></output>
+              <output name="prix" style="color:red;">Rs <?= $a['prix_maison']?></output>
               <span>Maison</span>
               <br>
-              <output name="prix" style="color:red;"><?= $a['prix_chambre']?></output>
+              <output name="prix" style="color:red;">Rs <?= $a['prix_chambre']?></output>
               <span>Chambre</span>
               <br>
-              <output name="prix" style="color:red;"><?= $a['prix_par_personne']?></output>
-              <span>Personne</span>
+              <span><?= $a['ville']?></span>
             </div>
             <div align="right" class="temp">
               <span><?= $a['date_publication']?></span>

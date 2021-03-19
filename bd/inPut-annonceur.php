@@ -16,6 +16,7 @@
     $nbr_chambre = htmlspecialchars($_POST['nbr_chambre']);
     $nbr_chambre_disp = htmlspecialchars($_POST['nbr_chambre_disp']);
     $prix_maison = htmlspecialchars($_POST['prix_maison']);
+    $prix_chambre = htmlspecialchars($_POST['prix_chambre']);
     $nbr_personne_par_chambre = htmlspecialchars($_POST['nbr_personne_par_chambre']);
     $nbr_chambre_plusieur = htmlspecialchars($_POST['nbr_chambre_plusieur']);
     $prix_par_personne = htmlspecialchars($_POST['prix_par_personne']);
@@ -23,10 +24,10 @@
     //note restriction de la maison
     $note_restriction = htmlspecialchars($_POST['note_restriction']);
 
-    $inser = $bdd->prepare('INSERT INTO annonce_annonceur(district,	ville,quartier,	rue,num_maison,code_postal,	tag,nbr_chambre,nbr_chambre_disp,	prix_maison,prix_chambre,	nbr_personne_par_chambre,	nbr_chambre_plusieur,prix_par_personne,note_restriction,date_publication)
+    $inser = $bdd->prepare('INSERT INTO annonce_annonceur(district,	ville,quartier,	rue,num_maison,code_postal,	tag,nbr_chambre,nbr_chambre_disp,	prix_maison,prix_chambre,nbr_personne_par_chambre,nbr_chambre_plusieur,prix_par_personne,note_restriction,date_publication)
                           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())');
-    $inser->execute(array($distric,$ville,$quartier,$rue,$num_maison,$code_postal,$tag,$nbr_chambre_disp,$prix_maison,$nbr_personne_par_chambre,$nbr_chambre_plusieur,$prix_par_personne,$note_restriction));
+    $inser->execute(array($distric,$ville,$quartier,$rue,$num_maison,$code_postal,$tag,$nbr_chambre,$nbr_chambre_disp,$prix_maison,$prix_chambre,$nbr_personne_par_chambre,$nbr_chambre_plusieur,$prix_par_personne,$note_restriction));
 
-    $message = "votre soumission a bien été postée";
+    header("Location:/Projet-Universite/annonceur/addPg.php?succer=good send!");
   }
  ?>

@@ -5,6 +5,9 @@
   if(isset($_SESSION['id']))
   {
 ?>
+<?php
+  $etd = $bdd->query('SELECT * FROM tbl_etudiant  WHERE aprobationEtd LIKE "oui"');//
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -18,80 +21,31 @@
       <?php require_once '../insert-php/head2.php'; ?>
       <div class="headert">
         <a href="/Projet-Universite/html-index/index.html"><img src="/Projet-Universite/multi-media/mainLogo.png" ></a>
+        <?php $home = $_SESSION['id'];?>
+          <a href="/Projet-Universite/html-index/optionU.php?id=<?= $home['id']?>"><input type="button" class="edition_profil" value="Home"></a>
+
         <a href="/Projet-Universite/bd/deconnexionEtd.php"><input type="button" class="connect" value="Se déconnecter"></a>
       </div>
     </header>
     <!-- Main -->
     <div class="box80">
-      <h4 class="titre11">Support des étudiants internationaux</h4>
+      <h4 class="titre11">Rubrique des étudiants étant à Maurice</h4>
+      <div class="cadrage">
 
+      <?php while($a = $etd->fetch()) { ?>
       <div class="contact1">
         <div class="profil-C">
             <img src="/Projet-Universite/multi-media/profil.png" alt="">
         </div>
         <div class="contenu">
-            <output name="nom-Ct">Ntumbabu Tshiteya Joas</output><br>
-            <output name="campus-Ct">Rose Hill Campus</output><br>
-            <output name="filier-Ct">Informatique Applique</output>
+            <output name="nom-Ct"><?= $a['nom']?></output><br>
+            <output name="campus-Ct"><?= $a['campus']?></output><br>
+            <output name="filier-Ct"><?= $a['filiere']?></output>
         </div>
       </div>
+      <?php }?>
 
-
-      <div class="contact2">
-        <div class="profil-C">
-          <img src="/Projet-Universite/multi-media/profil.png" alt="">
-        </div>
-        <div class="contenu">
-          <output name="nom-Ct">Ntumbabu Tshiteya Joas</output><br>
-          <output name="campus-Ct">Rose Hill Campus</output><br>
-          <output name="filier-Ct">Informatique Applique</output>
-        </div>
       </div>
-
-
-      <div class="contact3">
-        <div class="profil-C">
-          <img src="/Projet-Universite/multi-media/profil.png" alt="">
-        </div>
-        <div class="contenu">
-          <output name="nom-Ct">Ntumbabu Tshiteya Joas</output><br>
-          <output name="campus-Ct">Rose Hill Campus</output><br>
-          <output name="filier-Ct">Informatique Applique</output>
-        </div>
-      </div>
-
-
-      <div class="contact4">
-        <div class="profil-C">
-          <img src="/Projet-Universite/multi-media/profil.png" alt="">
-        </div>
-        <div class="contenu">
-          <output name="nom-Ct">Ntumbabu Tshiteya Joas</output><br>
-          <output name="campus-Ct">Rose Hill Campus</output><br>
-          <output name="filier-Ct">Informatique Applique</output>
-        </div>
-      </div>
-
-
-      <div class="contact5">
-        <div class="profil-C">
-          <img src="/Projet-Universite/multi-media/profil.png" alt="">
-        </div>
-        <div class="contenu">
-
-        </div>
-      </div>
-
-
-      <div class="contact6">
-        <div class="profil-C">
-          <img src="/Projet-Universite/multi-media/profil.png" alt="">
-        </div>
-        <div class="contenu">
-
-        </div>
-      </div>
-
 
     </div>
 
